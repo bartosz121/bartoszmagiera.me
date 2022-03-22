@@ -32,17 +32,20 @@ small {
 hr {
     color: rgba(0, 0, 0, 0.8);
     width: 90%;
-    margin-top: 40px;
+    margin-top: 1.5rem;
 }
 
 .title {
     font-weight: bold;
-    font-size: 3em;
     letter-spacing: 0.4px;
 }
 
+.title-big {
+    font-size: 3rem;
+}
+
 .title-medium {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .container {
@@ -55,11 +58,16 @@ hr {
 }
 
 header {
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
 header span {
     font-style: italic;
+}
+
+header p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
 }
 
 .content {
@@ -103,13 +111,28 @@ header span {
     line-height: 1.25rem;
 }
 
-.footer {
-    padding: 30px 0;
-    font-size: 0.8em;
+.aoc {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-.mikrus {
-    color: #176BEF;
+.footer {
+    padding: 1.2rem 0;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+address {
+    font-size: 0.8rem;
+    margin: 0.7rem 0;
+}
+
+address:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .line-through {
