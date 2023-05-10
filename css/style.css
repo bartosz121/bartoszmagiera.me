@@ -1,147 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
+h2 {
+    margin-bottom: 0.5rem;
 }
 
-body {
-    background: #fff;
-    font-size: 1.1em;
-    font-family: 'Roboto', sans-serif;
+ul li {
+    list-style: disc;
 }
 
-i {
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
-
-i:hover {
-    color: #176BEF;
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-small {
-    font-size: 0.6em;
-}
-
-hr {
-    color: rgba(0, 0, 0, 0.8);
-    width: 90%;
-    margin-top: 1.5rem;
-}
-
-.title {
-    font-weight: bold;
-    letter-spacing: 0.4px;
-}
-
-.title-big {
-    font-size: 3rem;
-}
-
-.title-medium {
-    font-size: 1.5rem;
-}
-
-.container {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    margin-bottom: 0.7rem;
-}
-
-header span {
-    font-style: italic;
-}
-
-header p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-}
-
-.content {
-    width: 80%;
-}
-
-.project-list > ul {
-    padding-top: 5px;
-}
-
-.item {
-    margin: 0.4rem 0;
-}
-
-.item-container {
+#shields {
     display: flex;
     flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.item-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    padding: 2px 0;
+#card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+    padding: 2rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
-
-.item-name a {
-    color: #176BEF;
-}
-
-.item-name *:hover {
-    text-decoration: underline;
-}
-
-.item-description {
-    margin-top: 0.3rem;
-    color: #828282;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
-
-.aoc {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.footer {
-    padding: 1.2rem 0;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-address {
-    font-size: 0.8rem;
-    margin: 0.7rem 0;
-}
-
-address:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.line-through {
-    text-decoration-line: line-through;
-}
-
-
-@media (min-width: 768px) {
-    .content {
-        width: 55%;
-    }
-  }

@@ -1,188 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Welcome Page - Bartosz Magiera</title>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <div class="title title-big">Hello!</div>
-            <div class="title title-medium">Welcome to my website</div>
-            <p>Click the hyperlink to see demo of the app or github icon to check the repository</p>
-        </header>
-        <div class="content">
-            <div class="project-list">
-                <label for="projects" class="title title-medium">Projects</label>
-                <ul id="projects">
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://socially.bartoszmagiera.live/">Socially</a>
-                                </span>
-                                <span class="item-description">
-                                    Social network website created in Django with React
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/socially"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://github.com/bartosz121/game-of-life-python">Game of Life</a>
-                                </span>
-                                <span class="item-description">
-                                    Conway's Game of Life in Python with PyQt6 GUI
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/game-of-life-python"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://github.com/bartosz121/mousai">Mousai</a>
-                                </span>
-                                <span class="item-description">
-                                    Music player built in Python
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/mousai"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://www.npmjs.com/package/react-skycons-extended">React Skycons Extended</a>
-                                </span>
-                                <span class="item-description">
-                                    NPM package; React component for Skycons
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/react-skycons-extended"><i class="fab fa-github"></a></i>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://weather-app.bartoszmagiera.live">Weather App</a>
-                                </span>
-                                <span class="item-description">
-                                    Weather application created in React and Express
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/weather-app"><i class="fab fa-github"></a></i>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://github.com/bartosz121/image-to-ascii">Image to ASCII</a>
-                                </span>
-                                <span class="item-description">
-                                    Image to ascii CLI app convertion in Python
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/image-to-ascii"><i class="fab fa-github"></a></i>
-                        </div>
-                    </li>
-                    <li class="item" title="Working on deploying secure websockets">
-                        <div class="item-container line-through">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://chattly.bartoszmagiera.live/">Chattly</a>
-                                </span>
-                                <span class="item-description">
-                                    WebRTC audio/video chat using django channels
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/chattly"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                </ul>
-                <label for="college-projects" class="title title-medium">College projects</label>
-                <ul id="college-projects">
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://newsreporter.bartoszmagiera.live/">NewsReporter</a>
-                                </span>
-                                <span class="item-description">
-                                    News scraper - <span class="item-name"><a class="item-name aoc" href="https://github.com/bartosz121/news-scraper-api">Backend api</a> <a class="item-name aoc" href="https://github.com/bartosz121/newsscraper-auth">Backend auth</a></span>
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/newsscraper-frontend"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name" title="Demo not available">
-                                    <a href="https://github.com/bartosz121/UrbanShop">UrbanShop</a>
-                                </span>
-                                <span class="item-description">
-                                    ASP.NET Core MVC Shop app with TailwindCSS and Alpine.js
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/UrbanShop"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://bartosz121.github.io/wsei-wdtw/">Pizzaland</a>
-                                </span>
-                                <span class="item-description">
-                                    Pizzeria website created in HTML, CSS and JavaScript
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/wsei-wdtw"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                </ul>
-                <label for="advent-of-code-solutions" class="title title-medium"><a href="https://adventofcode.com/about" class="aoc">Advent of Code</a> solutions</label>
-                <ul id="advent-of-code-solutions">
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://github.com/bartosz121/advent-of-code-2020">Advent of Code 2020</a>
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/advent-of-code-2020"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <div class="item-container">
-                            <div class="item-info">
-                                <span class="item-name">
-                                    <a href="https://github.com/bartosz121/advent-of-code-2021">Advent of Code 2021</a>
-                                </span>
-                            </div>
-                            <a href="https://github.com/bartosz121/advent-of-code-2021"><i class="fab fa-github"></i></a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+  </head>
+  <body>
+    <main class="container wrapper">
+      <article id="card">
+        <h2>Hello!</h2>
+        <div id="shields">
+          <a href="https://github.com/bartosz121"
+            ><img
+              src="https://img.shields.io/badge/-Github-000?style=flat&amp;logo=Github&amp;logoColor=white"
+              alt="Github"
+          /></a>
+          <a href="mailto:bmagiera121@gmail.com"
+            ><img
+              src="https://img.shields.io/badge/-Gmail-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white"
+              alt="Gmail"
+          /></a>
         </div>
-        <hr />
-        <div class="footer">
-            <address><a href="mailto:bmagiera121@gmail.com">bmagiera121@gmail.com</a></address>
-            <div>Bartosz Magiera - <a href="https://github.com/bartosz121"><i class="fab fa-github"></i></a></div>
-        </div>
-    </div>
-</body>
+        <ul>
+          <li>
+            <a href="https://socially.bartoszmagiera.live/">Socially</a>
+          </li>
+          <li>
+            <a href="https://github.com/bartosz121/game-of-life-python"
+              >Game of Life</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/bartosz121/mousai">Mousai</a>
+          </li>
+          <li>
+            <a href="https://www.npmjs.com/package/react-skycons-extended"
+              >React Skycons Extended</a
+            >
+          </li>
+          <li>
+            <a href="https://weather-app.bartoszmagiera.live">Weather App</a>
+          </li>
+          <li>
+            <a href="https://github.com/bartosz121/image-to-ascii"
+              >Image to ASCII</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/bartosz121/advent-of-code-2020"
+              >Advent of Code 2020</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/bartosz121/advent-of-code-2021"
+              >Advent of Code 2021</a
+            >
+          </li>
+        </ul>
+      </article>
+    </main>
+  </body>
 </html>
