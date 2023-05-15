@@ -8,102 +8,108 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
+    <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <title>Welcome Page - Bartosz Magiera</title>
   </head>
   <body>
-    <main class="container wrapper">
-      <article id="card">
-        <h2>Hello!</h2>
-        <div id="shields">
-          <a href="https://github.com/bartosz121"
-            ><img
-              src="https://img.shields.io/badge/-Github-000?style=flat&amp;logo=Github&amp;logoColor=white"
-              alt="Github"
-          /></a>
-          <a href="mailto:bmagiera121@gmail.com"
-            ><img
-              src="https://img.shields.io/badge/-Gmail-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white"
-              alt="Gmail"
-          /></a>
-        </div>
-        <ul>
-          <li>
-            <a href="https://github.com/ResHal1/reshal-api">Reshal Api</a>
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/chronal-api">Chronal Api</a>
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/fastapi-redis-chat"
-              >Redis chat</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/weather-app-v2"
-              >Weather App</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/react-skycons-extended"
-              >React Skycons Extended</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/mousai">Mousai</a>
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/wsei-javascript-2048"
-              >2048</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/image-to-ascii"
-              >Image to ASCII</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/news-scraper-api"
-              >News scraper Api</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/newsscraper-frontend"
-              >News scraper Ui</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/game-of-life-python"
-              >Game of Life Python</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/game-of-life-rust"
-              >Game of Life Rust</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/game-of-life-elixir"
-              >Game of Life Elixir</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/advent-of-code-2022"
-              >Advent of Code 2022</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/advent-of-code-2021"
-              >Advent of Code 2021</a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/bartosz121/advent-of-code-2020"
-              >Advent of Code 2020</a
-            >
-          </li>
-        </ul>
-      </article>
-    </main>
+    <div class="wrapper">
+      <canvas id="canvas"></canvas>
+      <div class="container">
+        <article id="card">
+          <h2>Hello!</h2>
+          <div id="shields">
+            <a href="https://github.com/bartosz121"
+              ><img
+                src="https://img.shields.io/badge/-Github-000?style=flat&amp;logo=Github&amp;logoColor=white"
+                alt="Github"
+            /></a>
+            <a href="mailto:bmagiera121@gmail.com"
+              ><img
+                src="https://img.shields.io/badge/-Gmail-c14438?style=flat&amp;logo=Gmail&amp;logoColor=white"
+                alt="Gmail"
+            /></a>
+          </div>
+          <ul>
+            <li>
+              <a href="https://github.com/ResHal1/reshal-api">Reshal Api</a>
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/chronal-api"
+                >Chronal Api</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/fastapi-redis-chat"
+                >Redis chat</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/weather-app-v2"
+                >Weather App</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/react-skycons-extended"
+                >React Skycons Extended</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/mousai">Mousai</a>
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/wsei-javascript-2048"
+                >2048</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/image-to-ascii"
+                >Image to ASCII</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/news-scraper-api"
+                >News scraper Api</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/newsscraper-frontend"
+                >News scraper Ui</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/game-of-life-python"
+                >Game of Life Python</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/game-of-life-rust"
+                >Game of Life Rust</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/game-of-life-elixir"
+                >Game of Life Elixir</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/advent-of-code-2022"
+                >Advent of Code 2022</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/advent-of-code-2021"
+                >Advent of Code 2021</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/bartosz121/advent-of-code-2020"
+                >Advent of Code 2020</a
+              >
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
   </body>
 </html>
