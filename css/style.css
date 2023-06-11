@@ -1,24 +1,76 @@
+:focus {
+    background-color: #93c4fd33;
+    border: 1px solid #0369a1;
+    outline-color: #0369a1;
+    outline: none;
+    outline-offset: 0;
+    text-decoration: underline;
+  }
+
+:active {
+    outline: none;
+    outline-offset: 0;
+}
+
 body {
     font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #0a0a0a;
+}
+
+article {
+    background-color: #171717;
+    border-radius: 4px;
 }
 
 h2 {
-    margin-bottom: 0.5rem;
+    color: #e2e8f0;
+    font-size: 2.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
+}
+
+ul {
+    line-height: var(--line-height);
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+    cursor: default;
+    --spacing: 1rem;
+    padding-right: 0;
+    padding-left: var(--spacing);
+    padding-inline-start: var(--spacing);
+    padding-inline-end: 0;
+    margin-top: 0;
 }
 
 ul li {
     list-style: disc;
+    color: #1f2937;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+li a {
+    color: #0ea5e9;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
 }
 
 #canvas {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
+    opacity: 0.9;
 }
 
 #shields {
@@ -31,9 +83,9 @@ ul li {
 #card {
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
-    z-index: 1;
+    padding: 2em 3em;
+    z-index: 2;
+    width: 100%;
 }
 
 .container {
@@ -45,7 +97,7 @@ ul li {
 }
 
 .wrapper {
-    display: relative;
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -55,3 +107,22 @@ ul li {
         max-width: 350px;
     }
   }
+
+
+@media (prefers-color-scheme: light){
+    body {
+        background-color: #f3f4f6;
+    }
+
+    h2 {
+        color: #171717;
+    }
+
+    article {
+        background-color: #ffffff;
+    }
+
+    #card {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+}
