@@ -10,3 +10,12 @@ export function getRandomNumber(min, max, useParseInt = true) {
   const number = Math.random() * (max - min) + min
   return useParseInt ? parseInt(number, 10) : number
 }
+
+/**
+ * Sleeps for `ms` miliseconds
+ *
+ * @param {number} ms
+ */
+export function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
