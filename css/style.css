@@ -1,147 +1,132 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:focus {
+    background-color: #93c4fd33;
+    border: 1px solid #0369a1;
+    outline-color: #0369a1;
+    outline: none;
+    outline-offset: 0;
+    text-decoration: underline;
+  }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
+:active {
+    outline: none;
+    outline-offset: 0;
 }
 
 body {
-    background: #fff;
-    font-size: 1.1em;
-    font-family: 'Roboto', sans-serif;
+    font-family: system-ui,-apple-system,"Segoe UI","Roboto","Ubuntu","Cantarell","Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a;
 }
 
-i {
-    font-size: 1.5em;
-    transition: color 0.3s;
+article {
+    background-color: #171717;
+    border-radius: 4px;
 }
 
-i:hover {
-    color: #176BEF;
+h2 {
+    color: #e2e8f0;
+    font-size: 2.4em;
+    margin-top: 0.2em;
+    margin-bottom: 0.6em;
 }
 
-a {
+ul {
+    line-height: var(--line-height);
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+    cursor: default;
+    --spacing: 1rem;
+    padding-right: 0;
+    padding-left: var(--spacing);
+    padding-inline-start: var(--spacing);
+    padding-inline-end: 0;
+    margin-top: 0;
+}
+
+ul li {
+    list-style: disc;
+    color: #1f2937;
+}
+
+li {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+li a {
+    color: #0ea5e9;
     text-decoration: none;
-    color: #000;
 }
 
-small {
-    font-size: 0.6em;
+li a:hover {
+    text-decoration: underline;
 }
 
-hr {
-    color: rgba(0, 0, 0, 0.8);
-    width: 90%;
-    margin-top: 1.5rem;
+#canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.7;
 }
 
-.title {
-    font-weight: bold;
-    letter-spacing: 0.4px;
+#shields {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.title-big {
-    font-size: 3rem;
-}
-
-.title-medium {
-    font-size: 1.5rem;
+#card {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em 3em;
+    z-index: 2;
+    width: 100%;
 }
 
 .container {
-    max-width: 840px;
-    margin: 0 auto;
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    margin-bottom: 0.7rem;
-}
-
-header span {
-    font-style: italic;
-}
-
-header p {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-}
-
-.content {
-    width: 80%;
-}
-
-.project-list > ul {
-    padding-top: 5px;
-}
-
-.item {
-    margin: 0.4rem 0;
-}
-
-.item-container {
-    display: flex;
-    flex-direction: row;
-}
-
-.item-info {
     width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: flex-start;
-    padding: 2px 0;
-}
-
-.item-name a {
-    color: #176BEF;
-}
-
-.item-name *:hover {
-    text-decoration: underline;
-}
-
-.item-description {
-    margin-top: 0.3rem;
-    color: #828282;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
-
-.aoc {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.footer {
-    padding: 1.2rem 0;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-address {
-    font-size: 0.8rem;
-    margin: 0.7rem 0;
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-address:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.line-through {
-    text-decoration-line: line-through;
-}
-
-
-@media (min-width: 768px) {
-    .content {
-        width: 55%;
+@media screen and (min-width: 400px) {
+    #card {
+        max-width: 250px;
     }
   }
+
+
+@media (prefers-color-scheme: light){
+    body {
+        background-color: #f3f4f6;
+    }
+
+    h2 {
+        color: #171717;
+    }
+
+    article {
+        background-color: #ffffff;
+    }
+
+    #card {
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    #canvas {
+        opacity: 0.5;
+    }
+}
