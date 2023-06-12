@@ -1,7 +1,25 @@
 // @ts-check
 
 import GameOfLife from "./algorithms/gameOfLife.js";
-import { sleep } from "./algorithms/utils.js";
+import MazeDFS from "./algorithms/mazeDFS.js";
+import { sleep, getRandomNumber } from "./algorithms/utils.js";
+
+const ALGORITHMS = [
+  {
+    name: "Game of life",
+    instance: GameOfLife,
+    tickrate: 100,
+    cellWidth: 10,
+    cellHeight: 10,
+  },
+  {
+    name: "Maze DFS",
+    instance: MazeDFS,
+    tickrate: 50,
+    cellWidth: 40,
+    cellHeight: 40,
+  }
+]
 
 let displayAlgorithm = true;
 let intervalId = null;
@@ -21,26 +39,28 @@ window.addEventListener("load", async () => {
   if (windowWidth < 768 && windowHeight < 1024) {
     console.warn("Window resolution is too small to display fancy stuff")
   } else {
-
     const canvas = document.getElementById("canvas");
     // @ts-ignore
     canvas.width = window.innerWidth
     // @ts-ignore
     canvas.height = window.innerHeight
 
-    const TICKRATE = 100
+    const randomAlgorithm = ALGORITHMS[getRandomNumber(0, 2)]
+    console.log("Playing:", randomAlgorithm.name)
 
-    const gameOfLifeAlg = new GameOfLife(10, 10, canvas)
-    gameOfLifeAlg.randomizeAliveState()
+    const algInstance = new randomAlgorithm.instance(randomAlgorithm.cellWidth, randomAlgorithm.cellHeight, canvas)
+    if (randomAlgorithm.name === "Game of life") {
+      algInstance.randomizeAliveState() // FIXME:
+    }
 
     intervalId = setInterval(async () => {
       if (displayAlgorithm) {
-        gameOfLifeAlg.runDarkModeCheck()
-        gameOfLifeAlg.step()
-        gameOfLifeAlg.display()
-        await sleep(TICKRATE)
+        algInstance.runDarkModeCheck()
+        algInstance.step()
+        algInstance.display()
+        await sleep(randomAlgorithm.tickrate)
       }
-    }, TICKRATE)
+    }, randomAlgorithm.tickrate)
   }
 })
 

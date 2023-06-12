@@ -1,31 +1,11 @@
 // @ts-check
 
 import { Algorithm, BetterSet } from "./algorithm.js";
-import { getRandomNumber } from "./utils.js";
+import { Cell, getRandomNumber } from "./utils.js";
 
-/**
- * @class
- */
-class Cell {
-  /**
-   * @constructor
-   * @param {number} x
-   * @param {number} y
-   */
-  constructor(x, y) {
-    /**
-     * Cell position `x`
-     * @property {number} x
-     */
-    this.x = x
-    /**
-     * Cell position `y`
-     * @property {number} y
-     */
-    this.y = y
-  }
-}
 
+const LIGHTMODE_CELL_COLOR = "#000000"
+const DARKMODE_CELL_COLOR = "#e5e7eb"
 
 /**
  * @class
@@ -42,14 +22,6 @@ class GameOfLife extends Algorithm {
     // @ts-ignore FIXME:
     super(...args)
 
-    /**
-     * @type {string} LIGHTMODE_CELL_COLOR
-     */
-    this.LIGHTMODE_CELL_COLOR = "#000000"
-    /**
-     * @type {string} DARKMODE_CELL_COLOR
-     */
-    this.DARKMODE_CELL_COLOR = "#e5e7eb"
     /**
      * Set which keeps position (x, y) of alive cells
      * @type {BetterSet<Cell>} _alive
@@ -105,7 +77,7 @@ class GameOfLife extends Algorithm {
   }
 
   display() {
-    this.ctx.fillStyle = this.isDarkModeEnabled ? this.DARKMODE_CELL_COLOR : this.LIGHTMODE_CELL_COLOR
+    this.ctx.fillStyle = this.isDarkModeEnabled ? DARKMODE_CELL_COLOR : LIGHTMODE_CELL_COLOR
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     for (const cell of this._alive) {
@@ -161,7 +133,7 @@ class GameOfLife extends Algorithm {
     const windowWidthScaled = Math.floor(window.innerWidth / this.cellWidth) || 1
     const windowHeightScaled = Math.floor(window.innerHeight / this.cellHeight) || 1
 
-    const aliveCellsCount = windowWidthScaled * windowHeightScaled / getRandomNumber(1, 2)
+    const aliveCellsCount = windowWidthScaled * windowHeightScaled / getRandomNumber(4, 8)
 
     /**
      * @type {BetterSet<Cell>}
