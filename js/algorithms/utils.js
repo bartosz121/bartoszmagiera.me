@@ -1,4 +1,27 @@
 /**
+ * @class
+ */
+export class Cell {
+  /**
+   * @constructor
+   * @param {number} x
+   * @param {number} y
+   */
+  constructor(x, y) {
+    /**
+     * Cell position `x`
+     * @property {number} x
+     */
+    this.x = x
+    /**
+     * Cell position `y`
+     * @property {number} y
+     */
+    this.y = y
+  }
+}
+
+/**
  * Generates a random number within a specified range.
  *
  * @param {number} min
@@ -19,3 +42,4 @@ export function getRandomNumber(min, max, useParseInt = true) {
 export function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
+

@@ -1,30 +1,7 @@
 // @ts-check
 
 import { Algorithm, BetterSet } from "./algorithm.js";
-import { getRandomNumber } from "./utils.js";
-
-/**
- * @class
- */
-class Cell {
-  /**
-   * @constructor
-   * @param {number} x
-   * @param {number} y
-   */
-  constructor(x, y) {
-    /**
-     * Cell position `x`
-     * @property {number} x
-     */
-    this.x = x
-    /**
-     * Cell position `y`
-     * @property {number} y
-     */
-    this.y = y
-  }
-}
+import { Cell, getRandomNumber } from "./utils.js";
 
 
 /**
