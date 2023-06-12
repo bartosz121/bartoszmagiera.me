@@ -4,6 +4,9 @@ import { Algorithm, BetterSet } from "./algorithm.js";
 import { Cell, getRandomNumber } from "./utils.js";
 
 
+const LIGHTMODE_CELL_COLOR = "#000000"
+const DARKMODE_CELL_COLOR = "#e5e7eb"
+
 /**
  * @class
  * @extends Algorithm
@@ -19,14 +22,6 @@ class GameOfLife extends Algorithm {
     // @ts-ignore FIXME:
     super(...args)
 
-    /**
-     * @type {string} LIGHTMODE_CELL_COLOR
-     */
-    this.LIGHTMODE_CELL_COLOR = "#000000"
-    /**
-     * @type {string} DARKMODE_CELL_COLOR
-     */
-    this.DARKMODE_CELL_COLOR = "#e5e7eb"
     /**
      * Set which keeps position (x, y) of alive cells
      * @type {BetterSet<Cell>} _alive
@@ -82,7 +77,7 @@ class GameOfLife extends Algorithm {
   }
 
   display() {
-    this.ctx.fillStyle = this.isDarkModeEnabled ? this.DARKMODE_CELL_COLOR : this.LIGHTMODE_CELL_COLOR
+    this.ctx.fillStyle = this.isDarkModeEnabled ? DARKMODE_CELL_COLOR : LIGHTMODE_CELL_COLOR
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
     for (const cell of this._alive) {
