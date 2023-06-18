@@ -15,11 +15,11 @@ class CellWalls {
   /**
    * @constructor
    * @param {boolean} [north=true]
-   * @param {boolean} [west=true]
-   * @param {boolean} [south=true]
    * @param {boolean} [east=true]
+   * @param {boolean} [south=true]
+   * @param {boolean} [west=true]
    */
-  constructor(north = true, west = true, south = true, east = true) {
+  constructor(north = true, east = true, south = true, west = true) {
     /**
      * @type {boolean}
      */
@@ -27,7 +27,7 @@ class CellWalls {
     /**
      * @type {boolean}
      */
-    this.west = west
+    this.east = east
     /**
      * @type {boolean}
      */
@@ -35,7 +35,7 @@ class CellWalls {
     /**
      * @type {boolean}
      */
-    this.east = east
+    this.west = west
   }
 }
 
@@ -50,11 +50,11 @@ class MazeCell extends Cell {
    * @param {number} y
    * @param {boolean} [visited=false]
    * @param {boolean} [north=true]
-   * @param {boolean} [west=true]
+   * @param {boolean} [east=true]
    * @param {boolean} [south=true]
    * @param {boolean} [east=true]
    */
-  constructor(x, y, visited = false, north = true, west = true, south = true, east = true) {
+  constructor(x, y, visited = false, north = true, east = true, south = true, west = true) {
     // @ts-ignore
     super(x, y)
 
@@ -66,7 +66,7 @@ class MazeCell extends Cell {
     /**
      * @type {CellWalls}
      */
-    this.walls = new CellWalls(north, west, south, east)
+    this.walls = new CellWalls(north, east, south, west)
   }
 }
 
@@ -259,14 +259,14 @@ class MazeDFS extends Algorithm {
         if (cell.walls.north) {
           drawLine(canvasCellX, canvasCellY, canvasCellX + this.cellWidth, canvasCellY)
         }
-        if (cell.walls.west) {
-          drawLine(canvasCellX + this.cellWidth, canvasCellY, canvasCellX + this.cellWidth, canvasCellY + this.cellHeight)
+        if (cell.walls.east) {
+          drawLine(canvasCellX, canvasCellY, canvasCellX, canvasCellY + this.cellHeight)
         }
         if (cell.walls.south) {
           drawLine(canvasCellX, canvasCellY + this.cellHeight, canvasCellX + this.cellWidth, canvasCellY + this.cellHeight)
         }
-        if (cell.walls.east) {
-          drawLine(canvasCellX, canvasCellY, canvasCellX, canvasCellY + this.cellHeight)
+        if (cell.walls.west) {
+          drawLine(canvasCellX + this.cellWidth, canvasCellY, canvasCellX + this.cellWidth, canvasCellY + this.cellHeight)
         }
 
       }

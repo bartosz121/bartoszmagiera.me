@@ -133,7 +133,7 @@ class GameOfLife extends Algorithm {
     const windowWidthScaled = Math.floor(window.innerWidth / this.cellWidth) || 1
     const windowHeightScaled = Math.floor(window.innerHeight / this.cellHeight) || 1
 
-    const aliveCellsCount = windowWidthScaled * windowHeightScaled / getRandomNumber(4, 8)
+    const aliveCellsCount = windowWidthScaled * windowHeightScaled / getRandomNumber(4, 7)
 
     /**
      * @type {BetterSet<Cell>}
